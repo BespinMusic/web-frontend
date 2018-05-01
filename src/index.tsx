@@ -5,11 +5,11 @@ import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 import SongStore from './songStore/songStore';
 
-const songStore = new SongStore;
+const songStore = new SongStore();
 songStore.fetchSongs();
 
 ReactDOM.render(
-  <App songs={songStore.songs} getSongs={songStore.fetchSongs}/>,
+  <App songs={songStore.songs} getSongs={songStore.fetchSongs} />,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
