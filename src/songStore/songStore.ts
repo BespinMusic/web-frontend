@@ -17,4 +17,16 @@ export default class SongStore {
         this.songs.replace(temp);
       });
   }
+
+  @action.bound
+  public uploadSong(song: Song): boolean {
+    console.log('yeaaahahahahah boooooiiiii');
+
+    fetch('/song', {
+      body: JSON.stringify(song),
+      method: 'post'
+    }).then(response => response.json());
+
+    return true;
+  }
 }

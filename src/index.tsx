@@ -9,7 +9,7 @@ const songStore = new SongStore();
 songStore.fetchSongs();
 
 ReactDOM.render(
-  <App songs={songStore.songs} getSongs={songStore.fetchSongs} />,
+  <App songs={songStore.songs} getSongs={songStore.fetchSongs} uploadSong={songStore.uploadSong} />,
   document.getElementById('root') as HTMLElement
 );
 registerServiceWorker();
