@@ -33,12 +33,14 @@ class SongForm extends React.Component<IProps, any> {
             value={song.title}
             id="newSongTitle"
             onChange={this.updateProperty}
+            label="Song Title"
           />
           <InputField
             name="album"
             value={song.album}
             id="newSongName"
             onChange={this.updateProperty}
+            label="Song Album"
           />
         </form>
         <button onClick={this.props.confirmSong}>Upload Song</button>

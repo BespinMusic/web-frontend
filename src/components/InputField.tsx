@@ -2,11 +2,14 @@ import * as React from 'react';
 
 import { observer } from 'mobx-react';
 
+import { FormGroup } from '@blueprintjs/core';
+
 export interface IProps {
   onChange: (key: string, value: string) => void;
   id: string;
   name: string;
   value: string;
+  label: string;
 }
 
 @observer
@@ -23,17 +26,16 @@ class InputField extends React.Component<IProps, any> {
   public render() {
     const input = this.props;
     return (
-      <div className="form-group">
-        <label htmlFor={input.id}>{input.name}</label>
+      <FormGroup label={input.label} labelFor={input.id}>
         <input
-          className="form-control"
+          className="form-control pt-input"
           id={input.id}
           name={input.name}
           onChange={this.onChange}
           type="text"
           value={input.value}
         />
-      </div>
+      </FormGroup>
     );
   }
 }

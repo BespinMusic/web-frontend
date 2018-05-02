@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@blueprintjs/core": "^2.3.1",
     "mobx": "^4.2.0",
     "mobx-react": "^5.0.0",
     "mobx-utils": "^4.0.1",
     "react": "^16.3.2",
     "react-app-rewire-mobx": "^1.0.8",
     "react-dom": "^16.3.2",
-    "react-scripts-ts": "2.15.1"
+    "react-scripts-ts": "2.15.1",
+    "react-transition-group": "^2.3.1"
   },
   "scripts": {
     "start": "react-scripts-ts start",
