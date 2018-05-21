@@ -8,7 +8,7 @@ export default class SongStore {
   @action.bound
   public fetchSongs() {
     console.log('test');
-    fetch('/songs')
+    fetch('/api/songs')
       .then(response => response.json())
       .then(data => {
         const temp = data.map((song: any) => {
@@ -22,7 +22,7 @@ export default class SongStore {
   public uploadSong(song: Song): boolean {
     console.log('yeaaahahahahah boooooiiiii');
 
-    fetch('/song', {
+    fetch('/api/song', {
       body: JSON.stringify(song),
       method: 'post'
     }).then(response => response.json());
