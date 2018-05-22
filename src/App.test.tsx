@@ -8,6 +8,10 @@ it('renders without crashing', () => {
   const songs: Song[] = [];
   const getSongs = () => null;
   const uploadSong = (song: Song) => true;
-  ReactDOM.render(<App songs={songs} getSongs={getSongs} uploadSong={uploadSong} />, div);
+  const signUp = () => null;
+  ReactDOM.render(
+    <App songs={songs} getSongs={getSongs} uploadSong={uploadSong} signUp={signUp} />,
+    div
+  );
   ReactDOM.unmountComponentAtNode(div);
 });

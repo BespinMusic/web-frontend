@@ -22,6 +22,7 @@ export interface IProps {
   songs: Song[];
   getSongs: () => void;
   uploadSong: (song: Song) => boolean;
+  signUp: () => void;
 }
 
 export interface IState {
@@ -60,6 +61,14 @@ class App extends React.Component<IProps, IState> {
             <NavbarDivider />
             <Button className="pt-minimal" icon="home" text="Home" />
             <Button className="pt-minimal" icon="document" text="Files" />
+          </NavbarGroup>
+          <NavbarGroup align={Alignment.RIGHT}>
+            <Button
+              className="pt-minimal"
+              icon="document"
+              text="Files"
+              onClick={this.props.signUp}
+            />
           </NavbarGroup>
         </Navbar>
         <ul>{this.props.songs.map((song, index) => <li key={index}>{song.title}</li>)}</ul>
